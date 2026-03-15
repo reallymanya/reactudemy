@@ -1,33 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+import './App.css';
+import Card from "./components/Card.jsx";
+import Header from './components/Header.jsx';
+import Hero from './components/Hero.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Hero/>
+    <Header/>
+      <h1 className='text-blue-600 dark:text-sky-400 border-2 p-4 rounded-xl'>Learn to Integrate tailwind</h1>
+      <div className='flex gap-4'>
+     <Card title = "Buy Python Course" buttontext = "Join now" imageurl={"https://plus.unsplash.com/premium_photo-1686054306703-fe68a1b0a7aa?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8"} />
+     <Card title = "Buy Cpp Course" imageurl = {"https://i.pinimg.com/736x/b7/17/61/b7176122fcb49f0fc7c4836443cd4c95.jpg"}/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
