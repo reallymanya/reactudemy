@@ -3,12 +3,32 @@ import './App.css';
 import Card from "./components/Card.jsx";
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
+import {Button} from "@/components/ui/button"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu"
 
 function App() {
 
   return (
     <>
+    <NavigationMenu>
+  <NavigationMenuList>
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
+      <NavigationMenuContent>
+        <NavigationMenuLink>Link</NavigationMenuLink>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+  </NavigationMenuList>
+</NavigationMenu>
     <Hero/>
+  <Button variant = "outline">Click Me</Button>
     <Header/>
       <h1 className='text-blue-600 dark:text-sky-400 border-2 p-4 rounded-xl'>Learn to Integrate tailwind</h1>
       <div className='flex gap-4'>
