@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+input, button {
+  font-family: 'Poppins', sans-serif;
+}

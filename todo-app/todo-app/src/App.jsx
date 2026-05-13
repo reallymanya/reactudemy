@@ -8,7 +8,7 @@ function DisplayToDos({
 }) {
   return (
     
-    <div className="bg-amber-100/60 p-4 rounded-xl mt-4 shadow-md">
+    <div className= {`p-4 rounded-xl mt-4 shadow-md transition-all duration-300 ${todo.done ? "bg-amber-200/60" : "bg-amber-100/60"} `}>
 
       <div className="flex items-start justify-between">
 
@@ -32,11 +32,14 @@ function DisplayToDos({
 
           <div>
             <h3
-              className="text-xl font-semibold"
+              className="text-xl font-serif"
               style={{
+                 fontFamily: "'Poppins', sans-serif",
+                 fontWeight: "500",
                 textDecoration: todo.done
                   ? "line-through"
-                  : "none"
+                  : "none",
+                textDecorationThickness: "2px",
               }}
             >
               {todo.title}
@@ -45,6 +48,8 @@ function DisplayToDos({
             <p
               className="text-gray-600 mt-1"
               style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: "300",
                 textDecoration: todo.done
                   ? "line-through"
                   : "none"
@@ -112,7 +117,7 @@ return(
   <>
   <div className='min-h-screen bg-amber-50 flex justify-center items-center'>
   <div className="bg-white p-6 rounded-2xl max-w-md">
-    <h1 className="text-2xl font-bold text-center mb-4 text-amber-900">
+    <h1 className="text-2xl font-bold text-center mb-4 text-amber-900 " style={{fontFamily: "'Boldonse', serif"}}>
           Todo App
         </h1>
     <input className='w-full border p-3 rounded-lg mb-3 focus:outline-none focus:border-2 focus:border-amber-800'
